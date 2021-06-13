@@ -43,7 +43,7 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "my account page displays",
+  "name": "user signed in successfully",
   "keyword": "Then "
 });
 formatter.examples({
@@ -110,14 +110,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "my account page displays",
+  "name": "user signed in successfully",
   "keyword": "Then "
 });
 formatter.match({
   "location": "AccountManagementSteps.userIsOnSignInPage()"
 });
 formatter.result({
-  "duration": 17754316900,
+  "duration": 41346528200,
   "status": "passed"
 });
 formatter.match({
@@ -134,21 +134,21 @@ formatter.match({
   "location": "AccountManagementSteps.userEnters(String,String)"
 });
 formatter.result({
-  "duration": 859926500,
+  "duration": 310100100,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userClicksOnSignIn()"
 });
 formatter.result({
-  "duration": 2361613200,
+  "duration": 1965498300,
   "status": "passed"
 });
 formatter.match({
-  "location": "AccountManagementSteps.myAccountPageDisplays()"
+  "location": "AccountManagementSteps.userSignedInSuccessfully()"
 });
 formatter.result({
-  "duration": 30800,
+  "duration": 14151300,
   "status": "passed"
 });
 });

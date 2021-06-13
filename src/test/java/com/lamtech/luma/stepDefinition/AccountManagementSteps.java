@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,6 +48,9 @@ public class AccountManagementSteps {
 
     @Then("^my account page is displayed$")
     public void myAccountPageIsDisplayed() {
+        String expectedResult = "My Account";
+        String actualResult = driver.getTitle();
+        Assert.assertEquals(expectedResult,actualResult);
     }
 
 
@@ -78,6 +82,18 @@ public class AccountManagementSteps {
 
     @Then("^user signed in successfully$")
     public void userSignedInSuccessfully() {
+          String expectedResult = "Magento 2 Commerce (Enterprise) Demo - Magebit";
+          String actualResult = driver.getTitle();
+          Assert.assertEquals(expectedResult, actualResult);
     }
+//Duplicate account creation Java step
+    @Then("^a pop up displays account already exist$")
+    public void aPopUpDisplaysAccountAlreadyExist() {
+          String expectedResult = "Create New Customer Account";
+          String actualResult = driver.getTitle();
+          Assert.assertEquals(expectedResult, actualResult);
+    }
+
+
 }
 

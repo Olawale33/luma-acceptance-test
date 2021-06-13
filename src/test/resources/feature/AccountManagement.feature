@@ -12,7 +12,7 @@ Feature: Account management
 
     Examples:
       | FirstName | LastName | Email             | Password | ConfirmPassword |
-      | Ade       | Bola     | Adebola1@yahoo.com | Adebola1 | Adebola1        |
+      | Ade       | Bola     | Adebola@yahoo.com | Adebola1 | Adebola1        |
 
   @SignIn
   Scenario Outline:  Sign in with valid email
@@ -24,4 +24,18 @@ Feature: Account management
 
     Examples:
       | Email             | Password |
-      | Adebola1@yahoo.com | Adebola1 |
+      | Adebola@yahoo.com | Adebola1 |
+
+
+@DuplicateAccountCreation
+  Scenario Outline: outline: Create account using valid email
+      Given user is on create an account page
+      When user enter "<FirstName>" "<LastName>" "<Email>" "<Password>" "<ConfirmPassword>"
+      And user clicks on create an account
+      Then a pop up displays account already exist
+
+
+
+      Examples:
+        | FirstName | LastName | Email             | Password | ConfirmPassword |
+        | Ade       | Bola     | Adebola@yahoo.com | Adebola1 | Adebola1        |
