@@ -1,6 +1,7 @@
 package com.lamtech.luma.stepDefinition;
 
 import com.lamtech.luma.pageObject.CreateAccountPagePO;
+import com.lamtech.luma.pageObject.CustomerLoginPagePO;
 import com.lamtech.luma.pageObject.HomePagePO;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
@@ -87,14 +88,20 @@ public class AccountManagementSteps {
 
     @When("^user enters \"([^\"]*)\" \"([^\"]*)\"$")
     public void userEnters(String Email, String Password){
-       driver.findElement(By.name("login[username]")).sendKeys(Email);
-       driver.findElement(By.name("login[password]")).sendKeys(Password);
+       //driver.findElement(By.name("login[username]")).sendKeys(Email);
+        CustomerLoginPagePO customerLoginPagePO = new CustomerLoginPagePO(driver);
+        customerLoginPagePO.enterLoginUserName(Email);
+
+       //driver.findElement(By.name("login[password]")).sendKeys(Password);
+        customerLoginPagePO.enterLoginPassword(Password);
 
     }
 
     @And("^user clicks on sign in$")
     public void userClicksOnSignIn() {
-        driver.findElement(By.cssSelector("#send2 > span")).click();
+        //driver.findElement(By.cssSelector("#send2 > span")).click();
+        CustomerLoginPagePO customerLoginPagePO = new CustomerLoginPagePO(driver);
+        customerLoginPagePO.clickSignInButton();
     }
 
 

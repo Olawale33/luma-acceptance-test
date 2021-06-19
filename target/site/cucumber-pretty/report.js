@@ -117,7 +117,7 @@ formatter.match({
   "location": "AccountManagementSteps.userIsOnSignInPage()"
 });
 formatter.result({
-  "duration": 41346528200,
+  "duration": 15239817200,
   "status": "passed"
 });
 formatter.match({
@@ -134,21 +134,21 @@ formatter.match({
   "location": "AccountManagementSteps.userEnters(String,String)"
 });
 formatter.result({
-  "duration": 310100100,
+  "duration": 426599600,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userClicksOnSignIn()"
 });
 formatter.result({
-  "duration": 1965498300,
+  "duration": 1802901100,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userSignedInSuccessfully()"
 });
 formatter.result({
-  "duration": 14151300,
+  "duration": 8979900,
   "status": "passed"
 });
 });

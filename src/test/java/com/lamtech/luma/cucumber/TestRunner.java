@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/feature",
         glue = {"com.lamtech.luma.stepDefinition"},
         format = {"pretty","html:target/site/cucumber-pretty"},
-        tags = {"@CreateAccount"}
+        tags = {"@SignIn"}
 
 )
 
