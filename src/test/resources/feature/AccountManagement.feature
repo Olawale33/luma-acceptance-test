@@ -12,7 +12,7 @@ Feature: Account management
 
     Examples:
       | FirstName | LastName | Email             | Password | ConfirmPassword |
-      | Ade       | Bola     | Adebola@yahoo.com | Adebola1 | Adebola1        |
+      | Ade       | Bola     | Adebola2@yahoo.com | Adebola1 | Adebola1        |
 
   @SignIn
   Scenario Outline:  Sign in with valid email
