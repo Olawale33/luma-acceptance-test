@@ -13,73 +13,79 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 18,
-  "name": "Sign in with valid email",
+  "line": 5,
+  "name": "Create account using valid email",
   "description": "",
-  "id": "account-management;sign-in-with-valid-email",
+  "id": "account-management;create-account-using-valid-email",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 17,
-      "name": "@SignIn"
+      "line": 4,
+      "name": "@CreateAccount"
     }
   ]
 });
 formatter.step({
-  "line": 19,
-  "name": "user is on sign in page",
+  "line": 6,
+  "name": "user is on create an account page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 20,
-  "name": "user enters \"\u003cEmail\u003e\" \"\u003cPassword\u003e\"",
+  "line": 7,
+  "name": "user enter \"\u003cFirstName\u003e\" \"\u003cLastName\u003e\" \"\u003cEmail\u003e\" \"\u003cPassword\u003e\" \"\u003cConfirmPassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 21,
-  "name": "user clicks on sign in",
+  "line": 8,
+  "name": "user clicks on create an account",
   "keyword": "And "
 });
 formatter.step({
-  "line": 22,
-  "name": "user signed in successfully",
+  "line": 9,
+  "name": "my account page is displayed",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 25,
+  "line": 13,
   "name": "",
   "description": "",
-  "id": "account-management;sign-in-with-valid-email;",
+  "id": "account-management;create-account-using-valid-email;",
   "rows": [
     {
       "cells": [
+        "FirstName",
+        "LastName",
         "Email",
-        "Password"
+        "Password",
+        "ConfirmPassword"
       ],
-      "line": 26,
-      "id": "account-management;sign-in-with-valid-email;;1"
+      "line": 14,
+      "id": "account-management;create-account-using-valid-email;;1"
     },
     {
       "cells": [
+        "Ade",
+        "Bola",
         "Adebola@yahoo.com",
+        "Adebola1",
         "Adebola1"
       ],
-      "line": 27,
-      "id": "account-management;sign-in-with-valid-email;;2"
+      "line": 15,
+      "id": "account-management;create-account-using-valid-email;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 14500618001,
+  "duration": 14712486099,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 27,
-  "name": "Sign in with valid email",
+  "line": 15,
+  "name": "Create account using valid email",
   "description": "",
-  "id": "account-management;sign-in-with-valid-email;;2",
+  "id": "account-management;create-account-using-valid-email;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -88,75 +94,90 @@ formatter.scenario({
       "name": "@AccountManagement"
     },
     {
-      "line": 17,
-      "name": "@SignIn"
+      "line": 4,
+      "name": "@CreateAccount"
     }
   ]
 });
 formatter.step({
-  "line": 19,
-  "name": "user is on sign in page",
+  "line": 6,
+  "name": "user is on create an account page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 20,
-  "name": "user enters \"Adebola@yahoo.com\" \"Adebola1\"",
+  "line": 7,
+  "name": "user enter \"Ade\" \"Bola\" \"Adebola@yahoo.com\" \"Adebola1\" \"Adebola1\"",
   "matchedColumns": [
     0,
-    1
+    1,
+    2,
+    3,
+    4
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 21,
-  "name": "user clicks on sign in",
+  "line": 8,
+  "name": "user clicks on create an account",
   "keyword": "And "
 });
 formatter.step({
-  "line": 22,
-  "name": "user signed in successfully",
+  "line": 9,
+  "name": "my account page is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AccountManagementSteps.userIsOnSignInPage()"
+  "location": "AccountManagementSteps.userIsOnCreateAnAccountPage()"
 });
 formatter.result({
-  "duration": 2031487300,
+  "duration": 5069295000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
+      "val": "Ade",
+      "offset": 12
+    },
+    {
+      "val": "Bola",
+      "offset": 18
+    },
+    {
       "val": "Adebola@yahoo.com",
-      "offset": 13
+      "offset": 25
     },
     {
       "val": "Adebola1",
-      "offset": 33
+      "offset": 45
+    },
+    {
+      "val": "Adebola1",
+      "offset": 56
     }
   ],
-  "location": "AccountManagementSteps.userEnters(String,String)"
+  "location": "AccountManagementSteps.userEnter(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 983084000,
+  "duration": 1725259200,
   "status": "passed"
 });
 formatter.match({
-  "location": "AccountManagementSteps.userClicksOnSignIn()"
+  "location": "AccountManagementSteps.userClicksOnCreateAnAccount()"
 });
 formatter.result({
-  "duration": 3387706900,
+  "duration": 2529479601,
   "status": "passed"
 });
 formatter.match({
-  "location": "AccountManagementSteps.userSignedInSuccessfully()"
+  "location": "AccountManagementSteps.myAccountPageIsDisplayed()"
 });
 formatter.result({
-  "duration": 199785799,
+  "duration": 51406900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 30400,
+  "duration": 26899,
   "status": "passed"
 });
 });

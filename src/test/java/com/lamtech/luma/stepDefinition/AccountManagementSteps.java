@@ -15,11 +15,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class AccountManagementSteps {
     WebDriver driver = Hooks.driver;
 
     @Given("^user is on create an account page$")
-    public void userIsOnCreateAnAccountPage() {
+    public void userIsOnCreateAnAccountPage() throws InterruptedException {
 //        //Define browser
 //        WebDriverManager.chromedriver().setup();
 //        //Open browser
@@ -31,6 +33,8 @@ public class AccountManagementSteps {
         //click on create an account
         //driver.findElement(By.linkText("Create an Account")).click();
 
+        //Thread.Sleep
+        Thread.sleep(2000);
         HomePagePO homePagePO = new HomePagePO(driver);
         homePagePO.clickCreateAccountLink();
 
@@ -62,6 +66,8 @@ public class AccountManagementSteps {
         //driver.findElement(By.cssSelector("#form-validate > div > div.primary > button > span")).click();
         CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.clickCreateAccountButton();
+        //To apply Implicit Wait
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @Then("^my account page is displayed$")
