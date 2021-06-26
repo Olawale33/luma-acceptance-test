@@ -1,5 +1,6 @@
 package com.lamtech.luma.stepDefinition;
 
+import com.lamtech.luma.cucumber.Hooks;
 import com.lamtech.luma.pageObject.CreateAccountPagePO;
 import com.lamtech.luma.pageObject.CustomerLoginPagePO;
 import com.lamtech.luma.pageObject.HomePagePO;
@@ -15,18 +16,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AccountManagementSteps {
-    WebDriver driver;
+    WebDriver driver = Hooks.driver;
 
     @Given("^user is on create an account page$")
     public void userIsOnCreateAnAccountPage() {
-        //Define browser
-        WebDriverManager.chromedriver().setup();
-        //Open browser
-        driver = new ChromeDriver();
-        //Maximize browser window
-        driver.manage().window().maximize();
-        //Launch the application
-        driver.get("https://magento2-demo.magebit.com/");
+//        //Define browser
+//        WebDriverManager.chromedriver().setup();
+//        //Open browser
+//        driver = new ChromeDriver();
+//        //Maximize browser window
+//        driver.manage().window().maximize();
+//        //Launch the application
+//        driver.get("https://magento2-demo.magebit.com/");
         //click on create an account
         //driver.findElement(By.linkText("Create an Account")).click();
 
@@ -77,11 +78,11 @@ public class AccountManagementSteps {
 
     @Given("^user is on sign in page$")
     public void userIsOnSignInPage() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://magento2-demo.magebit.com/");
-        //driver.findElement(By.linkText("Sign In")).click();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.get("https://magento2-demo.magebit.com/");
+//        //driver.findElement(By.linkText("Sign In")).click();
         HomePagePO homePagePO = new HomePagePO(driver);
         homePagePO.clickSignInLink();
     }

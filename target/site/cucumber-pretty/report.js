@@ -71,6 +71,10 @@ formatter.examples({
   ],
   "keyword": "Examples"
 });
+formatter.before({
+  "duration": 14500618001,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 27,
   "name": "Sign in with valid email",
@@ -117,7 +121,7 @@ formatter.match({
   "location": "AccountManagementSteps.userIsOnSignInPage()"
 });
 formatter.result({
-  "duration": 15239817200,
+  "duration": 2031487300,
   "status": "passed"
 });
 formatter.match({
@@ -134,21 +138,25 @@ formatter.match({
   "location": "AccountManagementSteps.userEnters(String,String)"
 });
 formatter.result({
-  "duration": 426599600,
+  "duration": 983084000,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userClicksOnSignIn()"
 });
 formatter.result({
-  "duration": 1802901100,
+  "duration": 3387706900,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userSignedInSuccessfully()"
 });
 formatter.result({
-  "duration": 8979900,
+  "duration": 199785799,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 30400,
   "status": "passed"
 });
 });
